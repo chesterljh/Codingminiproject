@@ -99,7 +99,7 @@ int main()                                     //stock level function
 
     Accesories[row-1][1] = stock_update;
 
-    for(int i =0 ;i<6 ;i++) // remove the garbage value
+    for(int i =0 ;i<9 ;i++) // remove the garbage value
     {
         for(int j =0 ; j< 2; j++)
         {
@@ -110,7 +110,7 @@ int main()                                     //stock level function
         }
     }
 
-    for(int i=0 ; i< 6; i++)   //display all stock 
+    for(int i=0 ; i< 9; i++)   //display all stock 
     {
         cout <<"" << Accesories[i][1]<< endl;
     }
@@ -138,7 +138,7 @@ int main()                                     //stock level function
 
     Component[row-1][1] = stock_update;
 
-    for(int i =0 ;i<6 ;i++)    // remove the garbage value
+    for(int i =0 ;i<12 ;i++)    // remove the garbage value
     {
         for(int j =0 ; j< 2; j++)
         {
@@ -149,7 +149,7 @@ int main()                                     //stock level function
         }
     }
 
-    for(int i=0 ; i< 6; i++) //display all stock 
+    for(int i=0 ; i< 12; i++) //display all stock 
     {
         cout <<"" << Component[i][1]<< endl;
     }
