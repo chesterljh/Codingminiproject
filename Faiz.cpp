@@ -6,7 +6,7 @@
 using namespace std;
 
 
-int passwordandusername()
+int main()
 {
     string username;
     int password, truepassword = 4231, Options ;
@@ -17,11 +17,11 @@ int passwordandusername()
         getline(cin,username);
         cin >> password;
 
-        while(password != truepassword)
+        do
         {
             cout << " Your password is incorrect";
             return 1;
-        }
+        }while(password != truepassword);
         
     cout <<"Welcome " << username << endl;
             return 0;
