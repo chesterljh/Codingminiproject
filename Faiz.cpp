@@ -28,15 +28,17 @@ void userandpassword()
     while(password != truepassword);
     
     cout <<"Welcome " << username << endl;
-    
+
+
 }
 
 
-void stockupdate()                                     //stock level function
+int stockupdate()                                     //stock level function
 {
-    int Options,row,collum = 2, stock_update;
+    int Options,row,collum = 2, stock_update,continueupdate;
     double Gadget[6][2],Accesories[9][2], Component[12][2];
-    for(;;)
+    do
+
     {       
     cout << "Please choose the categories that needed update stock:\n";
     cout << "1. Gadget\n";
@@ -89,7 +91,7 @@ void stockupdate()                                     //stock level function
     cout << "6.Mouse Pad\n";
     cout << "7.Sony speaker\n";
     cout << "8.Wired earphone\n";
-    cout << "9.ewwwww\n";
+    cout << "9.Sound equipment\n";
 
 
     cin >> row;
@@ -159,7 +161,14 @@ void stockupdate()                                     //stock level function
     cout << "Invalid choice\n";  
         break;
     }
+
+    cout << "Do you wish to continue to update?\n";
+    cout << "1. Yes \n";
+    cout << "2. No\n";
+    cin >> continueupdate;
     }
+    while (continueupdate == 1);
+    return 0;
             
 
 
