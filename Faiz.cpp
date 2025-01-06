@@ -6,8 +6,8 @@
 #include <cmath>
 using namespace std;
 
-/*
-int main()
+
+void userandpassword()
 {
     string username;
     int password, truepassword = 4231 ;
@@ -28,11 +28,11 @@ int main()
     while(password != truepassword);
     
     cout <<"Welcome " << username << endl;
-    return 0;
+    
 }
-*/
 
-int main()                                     //stock level function
+
+void stockupdate()                                     //stock level function
 {
     int Options,row,collum = 2, stock_update;
     double Gadget[6][2],Accesories[9][2], Component[12][2];
