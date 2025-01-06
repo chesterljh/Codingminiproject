@@ -27,17 +27,20 @@ void userandpassword()
     }
     while(password != truepassword);
     
-    cout <<"Welcome " << username << endl;
+    cout <<"Welcome " << username << endl;   // all empolyee function will be underhere
+    stockupdate();
+    
+    return 0;                                // if necessary ill do the hpp file for all so no worry
 
 
 }
 
 
-int stockupdate()                                     //stock level function
+void stockupdate()                                     //stock level function
 {
     int Options,row,collum = 2, stock_update,continueupdate;
-    double Gadget[6][2],Accesories[9][2], Component[12][2];
-    do
+    double Gadget[6][2],Accesories[9][2], Component[12][2];    // the array will be global this just
+    do                                                           // a place holder
 
     {       
     cout << "Please choose the categories that needed update stock:\n";
