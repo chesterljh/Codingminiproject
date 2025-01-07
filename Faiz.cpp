@@ -96,7 +96,6 @@ void stockupdate()                                     //stock level function
     cout << "8.Wired earphone\n";
     cout << "9.Sound equipment\n";
 
-
     cin >> row;
 
     cout <<"Please insert the stock:";
