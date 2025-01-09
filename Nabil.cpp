@@ -2,7 +2,7 @@
 #include <map>
 #include <string>
 using namespace std;
-int main() {
+void itemlocator() {
 for(;;){
     map<string, int,string> supermarketItems;
 
@@ -67,5 +67,4 @@ for(;;){
         cout << "********************************************************************************* \n\n";
     }
 }
-    return 0;
 }
