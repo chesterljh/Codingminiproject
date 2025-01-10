@@ -3,7 +3,7 @@ using namespace std;
 
 double Gadget[6][2],Accesories[9][2], Component[12][2];  //just a place holder
 
-int main()
+void priceupdate()
 {
     int loopcondition;
     do
