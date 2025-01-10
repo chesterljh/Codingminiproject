@@ -14,7 +14,7 @@ string gadget[6][2], accesories[9][2],  component[12][2];
 void displayStock(int selection, double Gadget[6][2], double Accesories[9][2], double Component[12][2], string gadget[6][2], string accesories[9][2], string component[12][2]);
 
 
-int main()
+void checkstocks()
 {   
     int loopingcondition;
     do{
