@@ -1,57 +1,142 @@
-//Name: NUR ADIBAH BINTI WAN ABDUL SHUKOR
-//Matrics no: 23300713
-
 #include <iostream>
 using namespace std;
 
-// Function to increase the price of an item
-void increasePrice(float &price, float amount) {
-    price += amount;
-    cout << "Price increased by " << amount << ". New price: RM " << price << endl;
-}
+double Gadget[6][2],Accesories[9][2], Component[12][2];  //just a place holder
 
-// Function to decrease the price of an item
-void decreasePrice(float &price, float amount) {
-    if (price >= amount) {
-        price -= amount;
-        cout << "Price decreased by " << amount << ". New price: RM " << price << endl;
-    } else {
-        cout << "Not enough price to decrease by " << amount << endl;
-    }
-}
+int main()
+{
+    int loopcondition;
+    do
+    {
+    double priceup,pricedown,price,pricecondition;
+    int categorieselect,itemselect1=0;
 
-int main() {
-    float price;  // Variable to store the price of the item
-    int choice;
-    float amount;
+    cout << "Select which categories that will be change price\n";
+    cout <<"1.Gadgets\n";
+    cout <<"2.Accesories\n";
+    cout <<"3.Components\n";
 
-    // Asking the user to input the current price of the item
-    cout << "Enter the current price of the item: RM ";
-    cin >> price;  // User inputs the current price
+    cin >> categorieselect;
 
-    while (true) {
-        // Display menu to the user
-        cout << "\nChoose an action:" << endl;
-        cout << "1. Increase price" << endl;
-        cout << "2. Decrease price" << endl;
-        cout << "3. Exit" << endl;
-        cin >> choice;
+    switch (categorieselect)
+    {
+    case 1:
+        cout <<"1.Samsung phone A12\n";
+        cout <<"2.Smart Panasonic tv\n";
+        cout <<"3. PS5\n";
+        cout <<"4.Smart TV\n";
+        cout <<"5.Laptop (Lenovo thinkpad)\n";
+        cout <<"6.Iphone 17 Pro\n";
 
-        if (choice == 1) {
-            cout << "Enter amount to increase the price: RM ";
-            cin >> amount;
-            increasePrice(price, amount);
-        } else if (choice == 2) {
-            cout << "Enter amount to decrease the price: RM ";
-            cin >> amount;
-            decreasePrice(price, amount);
-        } else if (choice == 3) {
-            cout << "Exiting the store system." << endl;
-            break;
-        } else {
-            cout << "Invalid choice! Please try again." << endl;
+        cin >> itemselect1;
+
+        cout << "Enter new price\n";
+        cin >> price;
+
+        cout <<"The price of RM" << Gadget[itemselect1][0] << " will be replace with RM";
+        cout << price<<endl;
+
+        cout << "Select true or false\n";
+        cout <<"1. True\n";
+        cout <<"2. False\n";
+        cin >> pricecondition;
+
+        if (pricecondition == 1)
+        {
+            Gadget[itemselect1][0] = price;
+            cout << "Update succesfull";
         }
-    }
+        else 
+        {
+            cout <<"Action canceled......";
+        }
+        break;
 
-    return 0;
+        case 2:
+        cout << "Please select the item:\n";
+        cout << "1.Phone case\n";
+        cout << "2.Charging cable type C\n";
+        cout << "3.Earbud \n";
+        cout << "4.Power bank\n";
+        cout << "5.Keyboard and mouse\n";
+        cout << "6.Mouse Pad\n";
+        cout << "7.Sony speaker\n";
+        cout << "8.Wired earphone\n";
+        cout << "9.Sound equipment\n";
+
+        cin >> itemselect1;
+
+        cout << "Enter new price\n";
+        cin >> price;
+
+        cout <<"The price of RM" << Accesories[itemselect1][0] << " will be replace with RM";
+        cout << price<<endl;
+
+        cout << "Select true or false\n";
+        cout <<"1. True\n";
+        cout <<"2. False\n";
+        cin >> pricecondition;
+
+        if (pricecondition == 1)
+        {
+            Accesories[itemselect1][0] = price;
+            cout << "Update succesfull";
+        }
+        else 
+        {
+            cout <<"Action canceled......";
+        }
+        break;
+        case 3:
+         cout << "Please select the item:\n";
+        cout << "1.Resistor (5 ohm)\n";
+        cout << "2.Capacitor(1 f)\n";
+        cout << "3.Battery lithium \n";
+        cout << "4.Led light\n";
+        cout << "5.Buzzer\n";
+        cout << "6.Transistor\n";
+        cout << "7.Switch\n";
+        cout << "8.Relay\n";
+        cout << "9.Connecting wire\n";
+        cout << "10.PCB board\n";
+        cout << "11.Bread board\n";
+        cout << "12.Soldering equipment\n";
+        cin >> itemselect1;
+
+        cout << "Enter new price\n";
+        cin >> price;
+
+        cout <<"The price of RM" << Component[itemselect1][0] << " will be replace with RM";
+        cout << price<<endl;
+
+        cout << "Select true or false\n";
+        cout <<"1. True\n";
+        cout <<"2. False\n";
+        cin >> pricecondition;
+
+        if (pricecondition == 1)
+        {
+            Component[itemselect1][0] = price;
+            cout << "Update succesfull";
+        }
+        else 
+        {
+            cout <<"Action canceled......";
+        }
+        break;
+    
+    default:
+    cout << "Invalid option";
+        break;
+    }
+    cout << "\n";
+    cout<<"Do you wish to continue?\n";
+    cout << "1.Yes\n";
+    cout<< "2.No\n";
+    cin >> loopcondition;
+    }
+    while(loopcondition ==1);
+    {
+        return 0;
+    }
 }
