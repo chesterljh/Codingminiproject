@@ -4,7 +4,7 @@
 #include <iostream>
 #include <vector>
 #include <iomanip>
-
+#include "faiz.cpp"
 using namespace std;
 
 // Structure to represent an item
@@ -26,33 +26,33 @@ void displayItems(const vector<Item>& items) {
 int main() {
     // List of items
     vector<Item> items = {
-        {"Samsung A12", 799.00},
-        {"Panasonic Smart TV", 799.00},
-        {"PS5", 3849.00},
-        {"Smart Watch", 189.00},
-        {"Lenovo ThinkPad Laptop", 2899.00},
-        {"IPhone 17 Pro", 5599.00},
-        {"Phone case", 29.00},
-        {"Charging Cable Type C", 15.00 },
-        {"Earbud", 49.00},
-        {"Power Bank", 59.00 },
-        {"Keyboard and mouse", 89.00 },
-        {"Mousepad", 25.00},
-        {"Sony Speaker", 399.00 },
-        {"Wired Earphones", 12.00},
-        {"Sound Equipment", 1299.00},
-        {"Resistor (5 ohms)", 3.99},
-        {"Capasitor (1 F)", 3.99 },
-        {"Lithium Battery", 5.99 },
-        {"LED Light", 2.99},
-        {"Buzzer", 2.99},
-        {"Transistor", 2.99},
-        {"Switch", 1.99 },
-        {"Relay",4.99 },
-        {"Connecting Wire", 0.99 },
-        {"PCB Board", 1.99},
-        {"Breadboard", 1.49 },
-        {"Soldering Equipment", 24.99 }
+        {"Samsung A12", Gadget [0][0]},
+        {"Panasonic Smart TV", Gadget [1][0]},
+        {"PS5", Gadget [2][0]},
+        {"Smart Watch", Gadget [3][0]},
+        {"Lenovo ThinkPad Laptop", Gadget [4][0]},
+        {"IPhone 17 Pro", Gadget [5][0]},
+        {"Phone case", Accesories [6][0]},
+        {"Charging Cable Type C", Accesories[7][0] },
+        {"Earbud", Accesories [8][0]},
+        {"Power Bank", Accesories [9][0] },
+        {"Keyboard and mouse", Accesories [10][0] },
+        {"Mousepad", Accesories [11][0]},
+        {"Sony Speaker", Accesories [12][0]},
+        {"Wired Earphones", Accesories [13][0]},
+        {"Sound Equipment", Accesories [14][0]},
+        {"Resistor (5 ohms)", Component [15][0]},
+        {"Capasitor (1 F)", Component [16][0]},
+        {"Lithium Battery", Component [17][0]},
+        {"LED Light", Component [18][0]},
+        {"Buzzer", Component [19][0]},
+        {"Transistor", Component [20][0]},
+        {"Switch", Component [21][0]},
+        {"Relay", Component [22][0]},
+        {"Connecting Wire", Component [23][0]},
+        {"PCB Board", Component [24][0]},
+        {"Breadboard", Component [25][0]},
+        {"Soldering Equipment", Component [26][0]}
      };
 
     vector<Item> cart; // Items selected by the user
