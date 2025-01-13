@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <cmath>
+#include "adibah.cpp"
 using namespace std;
 
 
