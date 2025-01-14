@@ -418,7 +418,7 @@ void stockupdate()                                     //stock level function
 }
 
 
-int main()
+int main()          // also set ni ke void employeesystem()
 {
     string username;
     int password, truepassword = 4231 ;
