@@ -418,7 +418,7 @@ void stockupdate()                                     //stock level function
 }
 
 
-int main()          // also set ni ke void employeesystem()
+void employeeinterface()          // also set ni ke void employeesystem()
 {
     string username;
     int password, truepassword = 4231 ;
@@ -464,7 +464,7 @@ int main()          // also set ni ke void employeesystem()
         cout<< "See you again\n";
         cout<<"\n";
         cout<<"\n";
-        return 0;                       //chester nanti tukar ni ke return;
+        return;                       //chester nanti tukar ni ke return;
     default:
         cout << "Invalid choice";
         break;
