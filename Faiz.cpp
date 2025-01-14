@@ -446,7 +446,7 @@ int main()          // also set ni ke void employeesystem()
     cout <<"1.Price changer\n";
     cout <<"2.Stock changer\n";
     cout <<"3.Display stock\n";
-    cout <<"Select 0 to stop";
+    cout <<"Select 0 to stop\n";
     cin >>selector;
 
     switch (selector)
@@ -461,8 +461,10 @@ int main()          // also set ni ke void employeesystem()
         checkstocks();
         break; 
     case 0:
-        cout<< "See you again";
-         return 0;                       //chester nanti tukar ni ke return;
+        cout<< "See you again\n";
+        cout<<"\n";
+        cout<<"\n";
+        return 0;                       //chester nanti tukar ni ke return;
     default:
         cout << "Invalid choice";
         break;
