@@ -1,10 +1,9 @@
 #include <iostream>
-#include "universal.cpp"
-#include "adibah2(operation).cpp"
+#include "main.hpp"
+#include "universal.hpp"
 using namespace std;
-void operations(int);
 
-void startpricechanger()
+void store::startpricechanger()
 {
     int loopcondition;
    

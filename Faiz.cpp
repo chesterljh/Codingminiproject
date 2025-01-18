@@ -4,14 +4,12 @@
 #include <iostream>
 #include <string.h>
 #include <iomanip>
-#include "faiz2(stockupdate).cpp"
-#include "adibah.cpp"
-//#include "universal.cpp"
+#include "main.hpp"
 using namespace std;
 
 
 
-int main()          // also set ni ke void employeesystem()
+void store::EmployeeUI()          // also set ni ke void employeesystem()
 {
     string username;
     int password, truepassword = 4231 ;
@@ -57,7 +55,7 @@ int main()          // also set ni ke void employeesystem()
         cout<< "See you again\n";
         cout<<"\n";
         cout<<"\n";
-        return 0;                       //chester nanti tukar ni ke return;
+        break;                       //chester nanti tukar ni ke return;
     default:
         cout << "Invalid choice";
         break;

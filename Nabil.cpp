@@ -1,10 +1,11 @@
-#include <iostream>
+#include <iostream> 
 #include <map>
 #include <string>
+#include "main.hpp"
 using namespace std;
-void itemlocator() {
+void store::itemlocator() {
 for(;;){
-    map<string, int,string> supermarketItems;
+    map<string, int> supermarketItems;
 
     
     supermarketItems["Samsung phone A12"] = 1;

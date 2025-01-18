@@ -1,8 +1,9 @@
 #include <iostream>
-#include "universal.cpp"
+#include "main.hpp"
+#include "universal.hpp"
 using namespace std;
 
-void stockupdate()                                     //stock level function
+void store::stockupdate()                                     //stock level function
 {
     int Options,row,collum = 2, stock_update,continueupdate;
     do                                                           // a place holder

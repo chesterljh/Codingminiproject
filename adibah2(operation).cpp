@@ -1,8 +1,9 @@
 #include <iostream>
-#include "universal.cpp"
+#include "main.hpp"
+#include "universal.hpp"
 using namespace std;
 
-void operations(int categorieselect)
+void store::operations(int categorieselect)
 {
         double price,pricecondition;
         int itemselect1=0;

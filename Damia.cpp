@@ -4,17 +4,18 @@
 #include <iostream>
 #include <vector>
 #include <iomanip>
-#include "faiz.cpp"
+#include "main.hpp"
+#include "universal.hpp"
 using namespace std;
 
 // Structure to represent an item
-struct Item {
+struct store::Item {
     string name;
     double price;
 };
 
 // Function to display the list of items
-void displayItems(const vector<Item>& items) {
+void store::displayItems(const vector<Item>& items) {
     cout << "\nAvailable Items:" << endl;
     cout << left << setw(5) << "No." << setw(20) << "Item" << "Price (RM)" << endl;
     cout << "--------------------------------------" << endl;
@@ -23,7 +24,7 @@ void displayItems(const vector<Item>& items) {
     }
 }
 
-int main() {
+int store::Buying() {
     // List of items
     vector<Item> items = {
         {"Samsung A12", Gadget [0][0]},
