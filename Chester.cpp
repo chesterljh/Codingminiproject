@@ -4,9 +4,9 @@
 #include "universal.hpp"
 
 void store::CustomerUI()
-{   
+{ 
     for(;;)
-    {
+    { 
         std::cout<<"Hi! Welcome to Faiz Electronics !\n"
                  <<"Please select the the Function that you would like to use.\nEnter any other number to exit.\n"
                  <<"1. Check Stock\n"
@@ -35,4 +35,5 @@ void store::CustomerUI()
         break;
     }     
     }
+    
 }

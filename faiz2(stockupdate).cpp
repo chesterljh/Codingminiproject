@@ -6,6 +6,7 @@ using namespace std;
 void store::stockupdate()                                     //stock level function
 {
     int Options,row,collum = 2, stock_update,continueupdate;
+    int confirmation;
     do                                                           // a place holder
 
     {       
@@ -19,6 +20,7 @@ void store::stockupdate()                                     //stock level func
     switch (Options)
     {
     case 1: 
+   
     cout << "Please select the item:\n";
     cout << "1.Samsung A12\n";
     cout << "2. Samsung Panasonic tv\n";
@@ -33,7 +35,6 @@ void store::stockupdate()                                     //stock level func
     cout <<"Please insert the stock:";
     cin >> stock_update;
 
-    Gadget[row-1][1] = stock_update;
     for(int i =0 ;i<6 ;i++)
     {
         for(int j =0 ; j< 2; j++) // remove the garbage value
@@ -45,9 +46,19 @@ void store::stockupdate()                                     //stock level func
         }
     }
 
-    for(int i=0 ; i< 6; i++)   //display all stock 
+    cout<<"The stock of "<< Gadget[row-1][1]<<" will be change into "<<stock_update<<endl;
+    cout<<"Confirm?\n";
+    cout<<"1.Yes\n";
+    cout<<"2.No\n";
+    cin>>confirmation;
+    if(confirmation == 1)
     {
-        cout <<"" << Gadget[i][1]<< endl;
+        Gadget[row-1][1] = stock_update;
+        cout<<"Action is succesfull\n";
+    }
+    else
+    {
+        cout<<"Action is cancelled.....\n";
     }
         break;
     case 2:
@@ -67,7 +78,6 @@ void store::stockupdate()                                     //stock level func
     cout <<"Please insert the stock:";
     cin >> stock_update;
 
-    Accesories[row-1][1] += stock_update;
 
     for(int i =0 ;i<9 ;i++) // remove the garbage value
     {
@@ -80,9 +90,19 @@ void store::stockupdate()                                     //stock level func
         }
     }
 
-    for(int i=0 ; i< 9; i++)   //display all stock 
+     cout<<"The stock of "<< Gadget[row-1][1]<<" will be change into "<<stock_update<<endl;
+    cout<<"Confirm?\n";
+    cout<<"1.Yes\n";
+    cout<<"2.No\n";
+    cin>>confirmation;
+    if(confirmation == 1)
     {
-        cout <<"" << Accesories[i][1]<< endl;
+        Gadget[row-1][1] = stock_update;
+        cout<<"Action is succesfull\n";
+    }
+    else
+    {
+        cout<<"Action is cancelled.....\n";
     }
         break;
     case 3:
@@ -106,7 +126,6 @@ void store::stockupdate()                                     //stock level func
     cout <<"Please insert the stock:";
     cin >> stock_update;
 
-    Component[row-1][1] += stock_update;
 
     for(int i =0 ;i<12 ;i++)    // remove the garbage value
     {
@@ -119,9 +138,19 @@ void store::stockupdate()                                     //stock level func
         }
     }
 
-    for(int i=0 ; i< 12; i++) //display all stock 
+    cout<<"The stock of "<< Gadget[row-1][1]<<" will be change into "<<stock_update<<endl;
+    cout<<"Confirm?\n";
+    cout<<"1.Yes\n";
+    cout<<"2.No\n";
+    cin>>confirmation;
+    if(confirmation == 1)
     {
-        cout <<"" << Component[i][1]<< endl;
+        Gadget[row-1][1] = stock_update;
+        cout<<"Action is succesfull\n";
+    }
+    else
+    {
+        cout<<"Action is cancelled.....\n";
     }
         break;
 

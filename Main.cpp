@@ -5,6 +5,8 @@ using namespace std;
 
 int main()
 {
+    for(;;)
+    {
     cout<<" ________________________________\n"
         <<"|                                |\n"
         <<"|        Electronics Store       |\n"
@@ -31,6 +33,6 @@ int main()
     default:
         break;
     }
-    
+    }
     return 0;
 }

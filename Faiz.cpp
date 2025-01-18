@@ -49,12 +49,13 @@ void store::EmployeeUI()          // also set ni ke void employeesystem()
         stockupdate();
         break;
     case 3:
-        //checkstocks();
+        checkstocks();
         break; 
     case 0:
         cout<< "See you again\n";
         cout<<"\n";
         cout<<"\n";
+        return;
         break;                       //chester nanti tukar ni ke return;
     default:
         cout << "Invalid choice";
