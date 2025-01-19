@@ -29,6 +29,7 @@ void store::CustomerUI()
         itemlocator(); 
         break;    
     case 4:
+        receipt();
         break;
     default:
         return;

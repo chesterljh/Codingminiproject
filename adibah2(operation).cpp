@@ -24,7 +24,7 @@ void store::operations(int categorieselect)
         cout << "Enter new price\n";
         cin >> price;
 
-        cout <<"The price of RM" << Gadget[itemselect1][0] << " will be replace with RM";
+        cout <<"The price of RM" << Gadget[0][itemselect1] << " will be replace with RM";
         cout << price<<endl;
 
         cout << "Select true or false\n";
@@ -35,7 +35,7 @@ void store::operations(int categorieselect)
 
         if (pricecondition == 1)
         {
-            Gadget[itemselect1][0] = price;
+            Gadget[0][itemselect1] = price;
             cout << "Update succesfull";
         }
         else 

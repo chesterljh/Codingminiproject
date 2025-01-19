@@ -19,5 +19,6 @@ public:
     void itemlocator();
     struct Item;
     void displayItems(const std::vector<Item>& items);
+    void receipt();
 };
 #endif
