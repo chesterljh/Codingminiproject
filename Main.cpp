@@ -1,11 +1,15 @@
 #include <iostream>
 #include "main.hpp"
-
+#include "universal.hpp"
 using namespace std;
 
 int main()
-{
-    for(;;)
+{   
+    buildDataG();
+    buildDataA();
+    buildDataC();
+
+    while(true)
     {
     cout<<" ________________________________\n"
         <<"|                                |\n"
@@ -19,8 +23,10 @@ int main()
         <<"2. Employee\n"
         <<"(Enter any other number to exit)\n"
         <<"> ";
-    store faiz;
+    
     cin>>key;
+    store faiz;
+
     switch (key)
     {
     case 1:
@@ -29,10 +35,14 @@ int main()
     case 2:
         faiz.EmployeeUI();
         break;
-    
     default:
+        cin.clear();
+        cin.ignore(10000,'\n');
         break;
     }
+    saveDataG();
+    saveDataA();
+    saveDataC();
     }
     return 0;
 }

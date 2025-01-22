@@ -3,7 +3,7 @@
 #define store_h
 
 #include <vector>
-
+#include <iostream>
 class store
 {
 private:
@@ -20,5 +20,6 @@ public:
     struct Item;
     void displayItems(const std::vector<Item>& items);
     void receipt();
+
 };
 #endif

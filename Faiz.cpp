@@ -18,7 +18,7 @@ void store::EmployeeUI()          // also set ni ke void employeesystem()
     do
     {
         cout << "Please insert username:\n";
-        getline(cin,username);
+        cin>>username;
         cout << "Please insert password:\n";
         cin >> password;
 

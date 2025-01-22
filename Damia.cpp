@@ -7,12 +7,20 @@
 #include <fstream>
 #include "main.hpp"
 #include "universal.hpp"
+
 using namespace std;
 
 // Structure to represent an item
-struct store::Item {
+struct store::Item
+{
     string name;
     double price;
+    double stock;
+    Item(string a, double b, double c):
+        name(move(a)),
+        price(b),
+        stock(c) 
+    {}
 };
 
 // Function to display the list of items
@@ -27,39 +35,35 @@ void store::displayItems(const vector<Item>& items) {
 
 int store::Buying() {
     // List of items
-    vector<Item> items = {
-        {"Samsung_A12", Gadget [0][0]},
-        {"Panasonic_Smart_TV", Gadget [1][0]},
-        {"PS5", Gadget [2][0]},
-        {"Smart_Watch", Gadget [3][0]},
-        {"Lenovo_ThinkPad_Laptop", Gadget [4][0]},
-        {"IPhone_17_Pro", Gadget [5][0]},
-        {"Phone_case", Accesories [6][0]},
-        {"Charging_Cable_Type_C", Accesories[7][0] },
-        {"Earbud", Accesories [8][0]},
-        {"Power_Bank", Accesories [9][0] },
-        {"Keyboard_and_mouse", Accesories [10][0] },
-        {"Mousepad", Accesories [11][0]},
-        {"Sony_Speaker", Accesories [12][0]},
-        {"Wired_Earphones", Accesories [13][0]},
-        {"Sound_Equipment", Accesories [14][0]},
-        {"Resistor (5 ohms)", Component [15][0]},
-        {"Capasitor (1 F)", Component [16][0]},
-        {"Lithium_Battery", Component [17][0]},
-        {"LED_Light", Component [18][0]},
-        {"Buzzer", Component [19][0]},
-        {"Transistor", Component [20][0]},
-        {"Switch", Component [21][0]},
-        {"Relay", Component [22][0]},
-        {"Connecting_Wire", Component [23][0]},
-        {"PCB_Board", Component [24][0]},
-        {"Breadboard", Component [25][0]},
-        {"Soldering_Equipment", Component [26][0]}
-     };
+    vector<Item> itemsG, itemsA, itemsC;
+    string name;
+    double price;
+    int stock;
+    ifstream inputG("Gadgets.txt");
+    while (!inputG.eof())
+    {
+        inputG>>name>>price>>stock;
+        itemsG.emplace_back(name,price,stock);
+    }
+    inputG.close();
+    ifstream inputA("Accessories.txt");
+    while (!inputA.eof())
+    {
+        inputA>>name>>price>>stock;
+        itemsA.emplace_back(name,price,stock);
+    }
+    inputA.close();
+    ifstream inputC("Components.txt");
+    while (!inputC.eof())
+    {
+        inputC>>name>>price>>stock;
+        itemsC.emplace_back(name,price,stock);
+    }
+    inputC.close();
 
     vector<Item> cart; // Items selected by the user
-    int choice;
-
+    int choice, cat;
+    
     cout << "Welcome to the store!" << endl;
 
     // Loop for user to select items
@@ -68,19 +72,70 @@ int store::Buying() {
     output.open("Receipt.txt");
     read.open("Receipt2.txt");
     do {
-        displayItems(items);
+        cout<<"Select category of Item:\n"
+            <<"1. Gadget\n"
+            <<"2. Accessories\n"
+            <<"3. Components\n"
+            <<"> ";
+        cin>>cat;
+        switch (cat)
+        {
+        case 1:
+        displayItems(itemsG);
         cout << "\nEnter the number of the item to add to your cart (0 to checkout): ";
         cin >> choice;
-
-        if (choice > 0 && choice <= static_cast<int>(items.size())) {
-            cart.push_back(items[choice - 1]);
-            output << " " << items[choice - 1].name;
-            read << items[choice - 1].price << " ";
-            cout << items[choice - 1].name << " has been added to your cart." << endl;
+        if (choice > 0 && choice <= static_cast<int>(itemsG.size())) {
+            
+            cart.push_back(itemsG[choice - 1]);
+            cout << itemsG[choice - 1].name << " has been added to your cart." << endl;            
+            output << " " << itemsG[choice - 1].name;
+            read << itemsG[choice - 1].price << " ";
+            Gadget[choice-1][1] -= 1;
+            
         } else if (choice != 0) {
             cout << "Invalid choice. Please try again." << endl;
         }
-    } while (choice != 0);
+            break;
+        
+        case 2:
+        displayItems(itemsA);
+        cout << "\nEnter the number of the item to add to your cart (0 to checkout): ";
+        cin >> choice;
+        if (choice > 0 && choice <= static_cast<int>(itemsA.size())) {
+            
+            cart.push_back(itemsA[choice - 1]);
+            cout << itemsA[choice - 1].name << " has been added to your cart." << endl;            
+            output << " " << itemsA[choice - 1].name;
+            read << itemsA[choice - 1].price << " ";
+            Accesories[choice-1][1] -= 1;
+
+        } else if (choice != 0) {
+            cout << "Invalid choice. Please try again." << endl;
+        }
+            break;
+
+        case 3:
+        displayItems(itemsC);
+        cout << "\nEnter the number of the item to add to your cart (0 to checkout): ";
+        cin >> choice;
+        if (choice > 0 && choice <= static_cast<int>(itemsC.size())) {
+            
+            cart.push_back(itemsC[choice - 1]);
+            cout << itemsC[choice - 1].name << " has been added to your cart." << endl;            
+            output << " " << itemsC[choice - 1].name;
+            read << itemsC[choice - 1].price << " ";
+            Component[choice-1][1] -= 1;
+            
+        } else if (choice != 0) {
+            cout << "Invalid choice. Please try again." << endl;
+        }
+            break;
+       
+        }
+        
+        
+        
+    } while (cat != 0);
     output.close();
     read.close();
 

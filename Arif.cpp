@@ -6,13 +6,15 @@
 #include <iomanip>
 #include "main.hpp"
 #include "universal.hpp"
+#include <fstream>
 using namespace std;
 
-int selection; 
-string gadget[6][2], accesories[9][2],  component[12][2];
 
 void store::checkstocks()
 {   
+    int selection; 
+    string gadget[6][2], accesories[9][2],  component[12][2];
+
     int loopingcondition;
     do{
     int selection;

@@ -2,9 +2,10 @@
 #include "main.hpp"
 #include "universal.hpp"
 using namespace std;
-
+#include <fstream>
 void store::operations(int categorieselect)
 {
+    int loopcondition;
         double price,pricecondition;
         int itemselect1=0;
 

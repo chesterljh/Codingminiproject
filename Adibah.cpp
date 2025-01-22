@@ -1,10 +1,12 @@
 #include <iostream>
 #include "main.hpp"
 #include "universal.hpp"
+#include <fstream>
 using namespace std;
 
 void store::startpricechanger()
 {
+    
     int loopcondition;
    
     do

@@ -1,0 +1,12 @@
+Resistor(5_Ohm) 10 24
+Capacitor(1_Farads) 10 33
+Lithium_Battery 12.5 12
+LED_Light 5 1
+Buzzer 4 5
+Transistor 8 17
+Switch 3 22
+Relay 2.3 34
+Connecting_Wire 5 34
+PCB_Board 9 11
+Bread_Board 15 7
+Soldering_Equipment 30 34

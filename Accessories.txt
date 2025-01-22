@@ -1,0 +1,9 @@
+Phone_Case 10 31
+Charging_Cable_Type_C 12 12
+Earbud 50 9
+Power_Bank 300 21
+Keyboard_and_Mouse 200 2
+Mouse_Pad 15 23
+Sony_Speaker 3000 15
+Wired_Earphone 70 16
+Sound_Equipment 10000 10
