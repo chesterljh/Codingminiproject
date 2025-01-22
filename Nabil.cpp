@@ -44,7 +44,7 @@ int confirm;
         cout << "This is item locator system to asist customer to track your wanted item\n\n";
         cout << "So may i know you what are you searching for?: ";
         cin.ignore();
-        getline(cin, userInput);
+        cin>>userInput;
 
         
         for (auto &c : userInput) {
