@@ -25,7 +25,7 @@ void store::operations(int categorieselect)
         cout << "Enter new price\n";
         cin >> price;
 
-        cout <<"The price of RM" << Gadget[0][itemselect1] << " will be replace with RM";
+        cout <<"The price of RM" << Gadget[itemselect1-1][0] << " will be replace with RM";
         cout << price<<endl;
 
         cout << "Select true or false\n";
@@ -36,7 +36,7 @@ void store::operations(int categorieselect)
 
         if (pricecondition == 1)
         {
-            Gadget[0][itemselect1] = price;
+            Gadget[itemselect1-1][0] = price;
             cout << "Update succesfull";
         }
         else 
@@ -62,7 +62,7 @@ void store::operations(int categorieselect)
         cout << "Enter new price\n";
         cin >> price;
 
-        cout <<"The price of RM" << Accesories[itemselect1][0] << " will be replace with RM";
+        cout <<"The price of RM" << Accesories[itemselect1-1][0] << " will be replace with RM";
         cout << price<<endl;
 
         cout << "Select true or false\n";
@@ -72,7 +72,7 @@ void store::operations(int categorieselect)
 
         if (pricecondition == 1)
         {
-            Accesories[itemselect1][0] = price;
+            Accesories[itemselect1-1][0] = price;
             cout << "Update succesfull";
         }
         else 
@@ -99,7 +99,7 @@ void store::operations(int categorieselect)
         cout << "Enter new price\n";
         cin >> price;
 
-        cout <<"The price of RM" << Component[itemselect1][0] << " will be replace with RM";
+        cout <<"The price of RM" << Component[itemselect1-1][0] << " will be replace with RM";
         cout << price<<endl;
 
         cout << "Select true or false\n";
@@ -109,7 +109,7 @@ void store::operations(int categorieselect)
 
         if (pricecondition == 1)
         {
-            Component[itemselect1][0] = price;
+            Component[itemselect1-1][0] = price;
             cout << "Update succesfull";
         }
         else 
