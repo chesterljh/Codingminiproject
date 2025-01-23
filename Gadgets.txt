@@ -3,4 +3,4 @@ Panasonic_Smart_TV 3000 43
 PS5 5000 23
 Apple_Smart_Watch 2500 12
 Lenovo_Thinkpad 4000 44
-IPhone_17_Pro 10000 10
+IPhone_17_Pro 10000 9

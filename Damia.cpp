@@ -40,23 +40,20 @@ int store::Buying() {
     double price;
     int stock;
     ifstream inputG("Gadgets.txt");
-    while (!inputG.eof())
+    while (inputG>>name>>price>>stock)
     {
-        inputG>>name>>price>>stock;
         itemsG.emplace_back(name,price,stock);
     }
     inputG.close();
     ifstream inputA("Accessories.txt");
-    while (!inputA.eof())
+    while (inputA>>name>>price>>stock)
     {
-        inputA>>name>>price>>stock;
         itemsA.emplace_back(name,price,stock);
     }
     inputA.close();
     ifstream inputC("Components.txt");
-    while (!inputC.eof())
+    while (inputC>>name>>price>>stock)
     {
-        inputC>>name>>price>>stock;
         itemsC.emplace_back(name,price,stock);
     }
     inputC.close();
