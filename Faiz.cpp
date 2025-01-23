@@ -21,6 +21,8 @@ void store::EmployeeUI()          // also set ni ke void employeesystem()
         cin>>username;
         cout << "Please insert password:\n";
         cin >> password;
+        cin.clear();
+        cin.ignore(10000,'\n');
 
         
         if(password != truepassword)

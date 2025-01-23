@@ -1,4 +1,4 @@
-Samsung_A12 700 23
+Samsung_A12 750 23
 Panasonic_Smart_TV 3000 43
 PS5 5000 23
 Apple_Smart_Watch 2500 12

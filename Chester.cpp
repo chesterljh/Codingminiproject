@@ -28,7 +28,7 @@ void store::CustomerUI()
         itemlocator(); 
         break;
     case 0:
-        std::cout<<"Thank you for shopping with us !!";
+        std::cout<<"Thank you for shopping with us !!\n\n";
         return;
         break;    
     default:
