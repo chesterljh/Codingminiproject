@@ -8,11 +8,10 @@ void store::CustomerUI()
     for(;;)
     { 
         std::cout<<"Hi! Welcome to Faiz Electronics !\n"
-                 <<"Please select the the Function that you would like to use.\nEnter any other number to exit.\n"
+                 <<"Please select the the Function that you would like to use.\n(Enter 0 to exit.)\n"
                  <<"1. Check Stock\n"
                  <<"2. Add to Shopping Cart\n"
                  <<"3. Locate an Item\n"
-                 <<"4. Print Receipt\n"
                  <<" > ";      
     int key;
     std::cin>>key;
@@ -27,12 +26,15 @@ void store::CustomerUI()
         break;
     case 3:
         itemlocator(); 
-        break;    
-    case 4:
-        receipt();
         break;
-    default:
+    case 0:
+        std::cout<<"Thank you for shopping with us !!";
         return;
+        break;    
+    default:
+        std::cin.clear();
+        std::cin.ignore(10000,'\n');
+        std::cout<<"Invalid choice.";
         break;
     }     
     }

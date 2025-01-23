@@ -138,16 +138,7 @@ int store::Buying() {
 
     // Display the total bill
     if (!cart.empty()) {
-        double total = 0.0;
-        cout << "\nItems in your cart:" << endl;
-        cout << left << setw(20) << "Item" << "Price (RM)" << endl;
-        cout << "-------------------------------" << endl;
-        for (const auto& item : cart) {
-            cout << left << setw(20) << item.name << fixed << setprecision(2) << item.price << endl;
-            total += item.price;
-        }
-        cout << "-------------------------------" << endl;
-        cout << "Total: RM" << fixed << setprecision(2) << total << endl;
+        receipt();
     } else {
         cout << "\nYour cart is empty." << endl;
     }
